@@ -4,7 +4,7 @@ import './App.css';
 import Switch from 'react-switch';
 import ExcelJS from 'exceljs';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://iot-robotx-server.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
 const DeviceControl = ({
   device,
