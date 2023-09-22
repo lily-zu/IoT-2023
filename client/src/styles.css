@@ -1,0 +1,101 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007BFF;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.new-device {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.new-device h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.new-device input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.create-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background-color: #0056b3;
+}
+
+.device-list .device-control {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.device-control h3 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.device-description {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .new-device, .device-list .device-control {
+        padding: 0.5rem;
+    }
+    
+    .new-device h2, .device-control h3 {
+        font-size: 1.2rem;
+    }
+    
+    .create-button {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+    }
+}

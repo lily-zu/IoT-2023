@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <!-- Favicon (Icon in the browser tab) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <!-- Recommended stylesheets for popular web fonts and icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-o5v6e5q8i5aAqz0wz1zJ0C5F5R9bDJOgbirz5BtPLw5Z5f5B5tPLO5z5B1rV5z5B6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    
+    <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <!-- App Content -->
+    <div class="container">
+        <!-- Your React app will be mounted here -->
+        <div id="root"></div>
+    </div>
+
+    <!-- Include React and other dependencies -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    
+    <!-- Your bundled JavaScript file (React app) -->
+    <script src="bundle.js"></script>
+</body>
+</html>

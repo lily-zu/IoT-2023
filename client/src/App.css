@@ -1,0 +1,275 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #fff; /* Background color for the entire app */
+  color: #333; /* Text color for the entire app */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ff5733; /* Orange Red for the header background */
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* New Device Form Styles */
+.new-device {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffcd3c; /* Arduino Yellow for the new device form background */
+  border-radius: 5px;
+  text-align: center;
+}
+
+.new-device input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff; /* White for input fields background */
+  color: #333;
+}
+
+.create-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Arduino Blue for create button */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.delete-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Arduino Blue for create button */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+.device-name {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0056b3;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Device List Styles */
+.device-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Device Control Styles */
+.device-control {
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #ffcd3c; /* Arduino Yellow for device control background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.device-icon {
+  max-width: 100px;
+  background-color: #ff5733;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.device-header h3 {
+  text-align: center;
+  background-color: #ff5733; /* Arduino Orange Red for Name */
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.device-id {
+  font-size: 14px;
+  color: #f0f0f0;
+  background-color: #ff5733; /* Arduino Yellow for Device ID */
+  padding: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.device-description {
+  font-style: italic;
+  font-size: 14px;
+  color: #f0f0f0;
+  background-color: #ff5733; /* Arduino Orange Red for Description */
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.switch-container {
+  margin-top: 10px;
+}
+
+/* Button Styles */
+.download-button,
+.delete-button,
+.edit-button,
+.save-button,
+.cancel-button,
+.toggle-button,
+.update-button,
+.download-sensor-data-button {
+  margin-top: 10px;
+  margin-right: 10px; /* Add right margin to separate buttons horizontally */
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.download-button {
+  background-color: #333;
+}
+
+.delete-button {
+  background-color: #333;
+}
+
+.edit-button,
+.save-button {
+  background-color: #ff5733; /* Arduino Orange Red for edit and save buttons */
+}
+
+.edit-button:hover,
+.save-button:hover {
+  background-color: #c62414; /* Darker shade for hover effect */
+}
+
+.cancel-button {
+  background-color: #dc3545;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+.toggle-button {
+  background-color: #17a2b8;
+}
+
+.toggle-button:hover {
+  background-color: #117a8b;
+}
+
+.update-button,
+.download-sensor-data-button {
+  background-color: #007bff;
+}
+
+.update-button:hover,
+.download-sensor-data-button:hover {
+  background-color: #0056b3;
+}
+
+/* Event List Styles */
+.event-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.event-list h4 {
+  margin-top: 0;
+}
+
+/* Gauge Styles */
+.gauge-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.gauge {
+  width: 45%;
+  padding: 15px;
+  background-color: #ffcd3c; /* Arduino Yellow for gauge background */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.gauge h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.gauge .download-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+}
+
+.gauge .download-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .device-control {
+    width: 100%;
+  }
+
+  .gauge {
+    width: 100%;
+  }
+}
+
+/* Add additional styling as needed... */
+/* Add margin to Create Switch and Delete Switch buttons */
+.create-switch-button {
+  margin-top: 20px; /* Add more margin to create space */
+  padding: 5px 10px;
+  background-color: #17a2b8;
+}
+
+.create-switch-button:hover {
+  background-color: #117a8b;
+}
+
+.delete-button {
+  margin-top: 20px; /* Add more margin to create space */
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
