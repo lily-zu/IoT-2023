@@ -4,7 +4,7 @@ import './App.css';
 import Switch from 'react-switch';
 import ExcelJS from 'exceljs';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://iot-robotx-server.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
 const DeviceControl = ({
   device,
@@ -14,16 +14,13 @@ const DeviceControl = ({
   switchNumber,
   onDownloadSensorData,
   onEditDevice,
-  onCreateSwitch,
-  onDeleteSwitch, // Add this prop
 }) => {
-  const switchName = switchNumber === 1 ? 'switch1' : 'switch2';
+  const switchName1 = 'switch1';
+  const switchName2 = 'switch2';
   const [showEvents, setShowEvents] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(device.name);
   const [editedDescription, setEditedDescription] = useState(device.description);
-  const [temperature, setTemperature] = useState(device.temperature || '');
-  const [humidity, setHumidity] = useState(device.humidity || '');
 
   const handleToggleEvents = () => {
     setShowEvents(!showEvents);
@@ -55,14 +52,6 @@ const DeviceControl = ({
     setEditedDescription(device.description);
   };
 
-  const handleCreateSwitch = () => {
-    onCreateSwitch(device._id);
-  };
-
-  const handleDeleteSwitch = () => {
-    onDeleteSwitch(device._id);
-  };
-
   return (
     <div className="device-control">
       <h3>
@@ -90,18 +79,19 @@ const DeviceControl = ({
         )}
       </p>
       <div className="switch-container">
-        {`Switch ${switchNumber}:`}{' '}
+        {`Switch 1:`}{' '}
         <Switch
-          onChange={(checked) => onSwitchChange(device._id, switchName, checked)}
-          checked={device[switchName]}
+          onChange={(checked) => onSwitchChange(device._id, switchName1, checked)}
+          checked={device[switchName1]}
         />
       </div>
-      <button className="create-switch-button" onClick={handleCreateSwitch}>
-        Create Switch
-      </button>
-      <button className="delete-switch-button" onClick={handleDeleteSwitch}>
-        Delete Switch
-      </button>
+      <div className="switch-container">
+        {`Switch 2:`}{' '}
+        <Switch
+          onChange={(checked) => onSwitchChange(device._id, switchName2, checked)}
+          checked={device[switchName2]}
+        />
+      </div>
       <button className="download-button" onClick={() => onDownloadExcel(device)}>
         Download Data Event to Excel File
       </button>
@@ -298,33 +288,9 @@ const App = () => {
     );
   };
 
-  const createSwitch = (deviceId) => {
-    axios
-      .post(`${API_URL}/create-switch/${deviceId}`)
-      .then((response) => {
-        console.log(response.data);
-        fetchDevices();
-      })
-      .catch((error) => {
-        console.error('Error creating switch:', error);
-      });
-  };
-
-  const deleteSwitch = (deviceId) => {
-    axios
-      .delete(`${API_URL}/delete-switch/${deviceId}`)
-      .then((response) => {
-        console.log(response.data);
-        fetchDevices();
-      })
-      .catch((error) => {
-        console.error('Error deleting switch:', error);
-      });
-  };
-
   return (
     <div className="App">
-      <h1>IoT Device Control</h1>
+      <h1>Factory.io Community of IIoT Platform</h1>
       <div className="new-device">
         <h2>Create New Device</h2>
         <input
@@ -356,8 +322,6 @@ const App = () => {
               onDownloadExcel={downloadExcel}
               onDownloadSensorData={downloadSensorData}
               onEditDevice={editDevice}
-              onCreateSwitch={createSwitch}
-              onDeleteSwitch={deleteSwitch} // Pass the deleteSwitch function
               switchNumber={1}
             />
           </div>
@@ -368,3 +332,4 @@ const App = () => {
 };
 
 export default App;
+
